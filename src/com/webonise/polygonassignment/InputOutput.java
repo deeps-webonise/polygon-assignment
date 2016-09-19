@@ -8,19 +8,21 @@ public class InputOutput {
 
 
     void calculatePerimeter(){
-        System.out.println("Enter the number of sides for calculating Perimeter");
         Scanner reader = new Scanner(System.in);
-        lengthOfSide = reader.nextInt();
-        System.out.println("Enter the length of each side");
+        System.out.println("Enter the number of sides for calculating Perimeter");
         numberOfSide = reader.nextInt();
+        if(numberOfSide < 3 || numberOfSide > 10 )
+            return;
+        System.out.println("Enter the length of each side");
+        lengthOfSide= reader.nextInt();
         Calculator calculatePolygon = new Polygon(lengthOfSide,numberOfSide);//TypeCompatibility
         calculatePolygon.getPerimeter();
     }
 
 
     void calculateInteriorAngles(){
-        System.out.println("Enter the number of sides for calculating sum of Interior Angles");
         Scanner reader = new Scanner(System.in);
+        System.out.println("Enter the number of sides for calculating sum of Interior Angles");
         lengthOfSide = reader.nextInt();
         Calculator calculatePolygon = new Polygon(lengthOfSide);//TypeCompatibility
         calculatePolygon.sumOfInteriorAngles();
