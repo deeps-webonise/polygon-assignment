@@ -1,34 +1,17 @@
 package com.webonise.polygonassignment;
 
-public class Polygon implements Calculator {
-    private final int noOfSides;
-    private final double lengthOfSides;
+public abstract class Polygon {
+    protected int noOfSides;
+    protected double lengthOfSides;
 
-    //Constructor Overloading
-    public Polygon(){
-        this.lengthOfSides=0;
-        this.noOfSides=0;
+    Polygon(int noOfSides) {
+        this.noOfSides = noOfSides;
     }
 
-    public Polygon(int noOfSides){
-        this.noOfSides=noOfSides;
-        this.lengthOfSides=0;
+    Polygon(int noOfSides, double lengthOfSides) {
+        this.noOfSides = noOfSides;
+        this.lengthOfSides = lengthOfSides;
     }
 
-    public Polygon(int noOfSides, int lengthOfSides){
-        this.noOfSides=noOfSides;
-        this.lengthOfSides=lengthOfSides;
-    }
-
-    @Override
-    public void getPerimeter() {
-        System.out.println(noOfSides*lengthOfSides);
-    }
-
-    @Override
-    public void sumOfInteriorAngles() {
-        System.out.println((noOfSides-2) * 180);
-
-
-    }
+    abstract void CalculateResultAndPrint();
 }
