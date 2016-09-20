@@ -1,1 +1,1 @@
-This repo contains the polygon assignment
+This repository contains the polygon assignment
