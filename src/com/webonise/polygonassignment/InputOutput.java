@@ -25,6 +25,7 @@ public class InputOutput {
                 calculateInteriorAngles();
                 break;
             default:
+                System.out.println("Wrong choice.\nExiting...");
                 return;
         }
     }
@@ -33,12 +34,14 @@ public class InputOutput {
         Scanner reader = new Scanner(System.in);
         logger.log(Level.INFO, "Enter the number of sides for calculating Perimeter");
         numberOfSide = reader.nextInt();
-        if (numberOfSide < MIN_SIDES || numberOfSide > MAX_SIDES)
+        if (numberOfSide < MIN_SIDES || numberOfSide > MAX_SIDES) {
+            System.out.println("Wrong arguments passed Please enter between 3 and 10\nExiting...");
             return;
+        }
         logger.log(Level.INFO, "Enter the length of each side");
         lengthOfSide = reader.nextInt();
         Polygon calculatePolygon = new PerimeterCalculator(lengthOfSide, numberOfSide);//TypeCompatibility
-        calculatePolygon.CalculateResultAndPrint();
+        calculatePolygon.calculateResultAndPrint();
     }
 
 
@@ -46,9 +49,13 @@ public class InputOutput {
         Scanner reader = new Scanner(System.in);
         logger.log(Level.INFO, "Enter the number of sides for calculating sum of Interior Angles");
         numberOfSide = reader.nextInt();
-        if (numberOfSide < MIN_SIDES || numberOfSide > MAX_SIDES)
+        if (numberOfSide < MIN_SIDES || numberOfSide > MAX_SIDES) {
+            System.out.println("Wrong arguments passed Please enter between 3 and 10\nExiting...");
             return;
+
+        }
+
         Polygon calculatePolygon = new SumOfInternalAnglesCalculator(numberOfSide);//TypeCompatibility
-        calculatePolygon.CalculateResultAndPrint();
+        calculatePolygon.calculateResultAndPrint();
     }
 }

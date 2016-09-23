@@ -7,7 +7,7 @@ public class PerimeterCalculator extends Polygon {
     }
 
     @Override
-    void CalculateResultAndPrint() {
+    void calculateResultAndPrint() {
         System.out.println(noOfSides * lengthOfSides);
     }
 }

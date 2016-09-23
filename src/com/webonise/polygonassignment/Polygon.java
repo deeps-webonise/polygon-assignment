@@ -13,5 +13,5 @@ public abstract class Polygon {
         this.lengthOfSides = lengthOfSides;
     }
 
-    abstract void CalculateResultAndPrint();
+    abstract void calculateResultAndPrint();
 }
