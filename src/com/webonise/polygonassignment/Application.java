@@ -4,8 +4,8 @@ import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class InputOutput {
-    Logger logger = Logger.getLogger(InputOutput.class.getName());
+public class Application {
+    Logger logger = Logger.getLogger(Application.class.getName());
 
     private int lengthOfSide;
     private int numberOfSide;
